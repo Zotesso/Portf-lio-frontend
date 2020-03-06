@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+        <title>Lanchonete</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="default.css">
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <div class="Menu" id="myMenu">
+           
+                <a href="index.html" class="active"> Fazer Pedido </a>
+                <a href="#"> Cardapio</a>
+                <a href="#"> Atendimento</a>
+                <a href="javascript:void(0);" class="icon" id="icons">
+                
+                    <i class="fa fa-bars"></i>
+                  </a>
+           
+        </div>
+
+        <ul id="minUl">
+            <li><a href="#img1"><img src="Images/lanche1.png" class="min"></a></li>
+            <li><a href="#img2"><img src="Images/lanche2.png" class="min"></a></li>
+            <li><a href="#img3"><img src="Images/lanche3.png" class="min"></a></li>
+        </ul>
+        <div class="lbox" id="img1">
+            <div class=boximg>
+                    <a href="#img3" class="btnCardp" id="prev">&#171;</a>
+                    <a href="" class="btnCardp" id="close">X</a>
+                    <img src="Images/lanche1.png" >
+                    <a href="#img2" class="btnCardp" id="next">&#187;</a>
+            </div>
+        </div>
+        <div class="lbox" id="img2">
+            <div class=boximg>
+                    <a href="#img1" class="btnCardp" id="prev">&#171;</a>
+                    <a href="" class="btnCardp" id="close">X</a>
+                    <img src="Images/lanche2.png" >
+                    <a href="#img3" class="btnCardp" id="next">&#187;</a>
+            </div>
+        </div>
+        <div class="lbox" id="img3">
+            <div class=boximg>
+                    <a href="#img2" class="btnCardp" id="prev">&#171;</a>
+                    <a href="" class="btnCardp" id="close">X</a>
+                    <img src="Images/lanche3.png" >
+                    <a href="#img1" class="btnCardp" id="next">&#187;</a>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,358 @@
+/*  Responsive Menu  */
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(233,214,61);
+    background: radial-gradient(circle, rgb(207, 186, 21) 0%, rgb(151, 10, 10) 82%);
+   
+  }
+
+.Menu{
+    overflow: hidden;
+  background-color: #581d22;
+  margin:0px;
+  padding:0px;
+
+}
+
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: absolute;
+  top: 10%;
+  left:30%;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 600px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+.btn-grad {
+  background-image: linear-gradient(to right, #000000 0%, #e74c3c 51%, #000000 100%);
+    margin:10px;
+    padding: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
+     box-shadow: 0 0 20px #eee; 
+    border-radius: 10px;
+    display: block;
+    width:20%;
+    height:20% ;
+}
+
+#btndiv{
+  padding-left:40%;
+}
+.btn-grad:hover { background-position: right center; }
+
+.Menu a{
+  float:left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.Menu a:hover {
+    background-color: rgba(216, 25, 25, 0.918);
+    color: white;
+  }
+
+  .Menu  a.active {
+    background-color: rgba(168, 0, 0, 0.822);
+    color: white;
+  }
+
+  .Menu .icon {
+    display: none;
+  }
+  .mySlides img{
+    padding-left:35%;
+    height:300px ;
+    width:300px ;
+}
+
+.ClonableItem {
+  display: table;
+  width: 100%;
+  font-family: Arial;
+}
+
+.ClonableItem select {
+  background-color:  rgba(168, 0, 0, 0.822);
+  color:white;
+  float:left;
+  border: 8px solid transparent; 
+  border-color: transparent  transparent transparent transparent;
+}
+
+/*style the items (options), including the selected item:*/
+.ClonableItem , .ClonableItem select option {
+  color: #ffffff;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.ClonableItem select option{
+ 
+  background-color: rgba(168, 0, 0, 0.822);
+}
+
+.lbox{
+  display:none;
+  opacity: 0;
+}
+
+#minUl{
+    width:80%;
+    list-style:none ;
+    display:flex;
+    margin: 5% auto;
+}
+
+#minUl li{
+  height:33% ;
+  width:33% ;
+padding:5%;
+}
+
+.min{
+  width:100%;
+  height: 100%;
+}
+
+.lbox:target{
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  background: rgb(10,10,10,.7);
+  position:fixed;
+}
+
+.boximg{
+  width:100%;
+  margin:150px auto;
+}
+
+.boximg img{
+  opacity:0;
+}
+.lbox:target .boximg img{
+  -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    opacity:1;
+    width:50%;
+    padding-left:25% ;
+    top:10%;
+}
+.btnCardp{
+ color:#fff;
+ font-family: arial;
+ text-decoration: none;
+ position:absolute;
+ width:50px;
+ height: 50px;
+ font-size:40px;
+ text-align:center;
+}
+.btncardp, #prev{
+  left:5%;
+  top:45%;
+}
+.btncardp, #next{
+  right:5%;
+  top:45%;
+}
+.btncardp, #close{
+  right:2%;
+  top:0;
+}
+  @media screen and (max-width: 600px) {
+    .Menu  a:not(:first-child) {display: none;}
+    .Menu  a.icon {
+      float: right;
+      display: block;
+    }
+    .mySlides img{
+        padding-left:20% ;
+    }
+ 
+  }
+  
+  @media screen and (max-width: 600px) {
+    .Menu.responsive {position: relative;}
+    .Menu.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .Menu.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .btn-grad{
+      height: 5%;
+      width: 30%;
+   }
+   #btndiv{
+     padding-left:30%;
+   }
+
+   .form-popup{
+      left:0px;
+      top:10%;
+   }
+  }
+
+  /* slideshow */
+
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+
+  .mySlides {
+    display: none;
+  }
+  
+
+  
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .activeSlide, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
